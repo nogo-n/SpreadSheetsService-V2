@@ -19,6 +19,9 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Generate Maven Wrapper
+        run: mvn -N io.takari:maven:wrapper
+
       - name: Change to demo directory and build
         run: |
           cd demo
