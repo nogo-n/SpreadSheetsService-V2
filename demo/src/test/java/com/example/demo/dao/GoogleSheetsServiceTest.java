@@ -19,7 +19,7 @@ class GoogleSheetsServiceTest {
     void readDataFromPublicSheet() {
         // モックのデータを設定
         String mockSheetsData = "T\nT\nA,16\nB,23\nC,1\nD,43\nE,2";
-        when(restTemplate.getForObject("https://docs.google.com/spreadsheets/d/{シートID}", String.class))
+        when(restTemplate.getForObject("https://docs.google.com/spreadsheets/d/{シートI}", String.class))
                 .thenReturn(mockSheetsData);
         // テスト対象のサービスを作成
         GoogleSheetsService googleSheetsService = new GoogleSheetsService(restTemplate);
