@@ -19,13 +19,12 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Set up Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Build with Maven
-        run: mvn -B clean install
+        run: |
+          chmod +x mvnw
+          ./mvnw -B clean install
 
       - name: Run Tests
-        run: mvn test
+        run: |
+          chmod +x mvnw
+          ./mvnw test
