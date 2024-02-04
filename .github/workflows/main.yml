@@ -24,7 +24,7 @@ jobs:
 
       - name: Change to demo directory and build
         run: |
-          cd demo
+          cd SortService
           chmod +x mvnw
           ./mvnw -B clean install
           ./mvnw test
