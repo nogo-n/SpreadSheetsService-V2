@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 public class GoogleSheetsService {
 
     //スプレッドシートのURLを記載
-    private String publicSheetsUrl = "https://docs.google.com/spreadsheets/d/{シートID}";
+    private String publicSheetsUrl = "https://docs.google.com/spreadsheets/d/126R5vAWmuNA8tiTQ4KN-K3IfuwD5w5OSOAvZUaUZ5wE";
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -26,6 +26,7 @@ public class GoogleSheetsService {
     public List<Map<String, String>> readDataFromPublicSheet() {
         // Google Sheetsの公開URLを使ってデータを取得
         String sheetsData = restTemplate.getForObject(publicSheetsUrl, String.class);
+        System.out.println("sheetsData" + sheetsData);
 
         // CSV形式のデータを行ごとに分割
         String[] rows = sheetsData.split("\n");
@@ -51,4 +52,5 @@ public class GoogleSheetsService {
 
         return dataList;
     }
+
 }
