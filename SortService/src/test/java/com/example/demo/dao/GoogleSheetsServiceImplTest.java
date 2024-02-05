@@ -24,7 +24,7 @@ class GoogleSheetsServiceImplTest {
         GoogleSheetsServiceImpl googleSheetsServiceImpl = new GoogleSheetsServiceImpl(restTemplate);
 
         // テスト実行
-        List<Map<String, String>> result = googleSheetsServiceImpl.readDataFromPublicSheet("https://docs.google.com/spreadsheets/d/{シートID}", 2, 7);
+        List<Map<String, String>> result = googleSheetsServiceImpl.readDataFromPublicSheet("https://docs.google.com/spreadsheets/d/{シートID}", 1, 5);
 
         // 結果の検証
         assert result.size() == 5;
