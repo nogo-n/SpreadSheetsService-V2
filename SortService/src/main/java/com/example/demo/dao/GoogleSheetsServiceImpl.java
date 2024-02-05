@@ -11,9 +11,6 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class GoogleSheetsServiceImpl implements GoogleSheetsService{
 
-    //スプレッドシートのURLを記載
-    private String publicSheetsUrl = "https://docs.google.com/spreadsheets/d/{シートID}";
-
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     private final RestTemplate restTemplate;
@@ -24,9 +21,9 @@ public class GoogleSheetsServiceImpl implements GoogleSheetsService{
     }
 
     @Override
-    public List<Map<String, String>> readDataFromPublicSheet() {
+    public List<Map<String, String>> readDataFromPublicSheet(String url, int startRow, int endRow) {
         // Google Sheetsの公開URLを使ってデータを取得
-        String sheetsData = restTemplate.getForObject(publicSheetsUrl, String.class);
+        String sheetsData = restTemplate.getForObject(url, String.class);
         System.out.println("sheetsData" + sheetsData);
 
         // CSV形式のデータを行ごとに分割
@@ -34,7 +31,7 @@ public class GoogleSheetsServiceImpl implements GoogleSheetsService{
 
         // 特定の範囲のデータ行を取得（ここでは第2行から第7行）
         //newRowsには[A,16, B,23, ...]のように値が入っている("A,16"が1つの要素である)
-        String[] newRows = Arrays.copyOfRange(rows, 2, 7);
+        String[] newRows = Arrays.copyOfRange(rows, startRow + 1, endRow + 2);
         // newRows を出力
         System.out.println("newRows: " + Arrays.toString(newRows));
 

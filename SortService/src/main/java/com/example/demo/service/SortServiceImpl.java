@@ -23,9 +23,9 @@ public class SortServiceImpl implements SortService{
     }
 
     @Override
-    public List<String[]> processDataFromGoogleSheets() throws GeneralSecurityException, IOException {
+    public List<String[]> processDataFromGoogleSheets(String url, int startRow, int endRow) throws GeneralSecurityException, IOException {
         // Google Sheetsからデータを読み込む
-        List<Map<String, String>> mappedList = googleSheetsServiceImpl.readDataFromPublicSheet();
+        List<Map<String, String>> mappedList = googleSheetsServiceImpl.readDataFromPublicSheet(url, startRow, endRow);
 
         // 中身を出力
         System.out.println("Original Mapped List:");

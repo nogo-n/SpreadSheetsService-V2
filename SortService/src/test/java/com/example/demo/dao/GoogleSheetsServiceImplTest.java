@@ -24,10 +24,9 @@ class GoogleSheetsServiceImplTest {
         GoogleSheetsServiceImpl googleSheetsServiceImpl = new GoogleSheetsServiceImpl(restTemplate);
 
         // テスト実行
-        List<Map<String, String>> result = googleSheetsServiceImpl.readDataFromPublicSheet();
+        List<Map<String, String>> result = googleSheetsServiceImpl.readDataFromPublicSheet("https://docs.google.com/spreadsheets/d/{シートID}", 2, 7);
 
-        // 結果の検証（例：データが正しく処理されているか）
-        // ここでは、データが正しく追加されていることを検証するサンプルです。
+        // 結果の検証
         assert result.size() == 5;
         assert result.get(0).get("A").equals("16");
         assert result.get(1).get("B").equals("23");

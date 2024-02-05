@@ -5,5 +5,5 @@ import java.util.Map;
 
 public interface GoogleSheetsService {
 
-    List<Map<String, String>> readDataFromPublicSheet();
+    List<Map<String, String>> readDataFromPublicSheet(String url, int startRow, int endRow);
 }

@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface SortService {
 
-    List<String[]> processDataFromGoogleSheets() throws GeneralSecurityException, IOException;
+    List<String[]> processDataFromGoogleSheets(String url, int startRow, int endRow) throws GeneralSecurityException, IOException;
 
 }

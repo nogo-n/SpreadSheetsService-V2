@@ -14,13 +14,13 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class sortServiceImplTest {
+class SortServiceImplTest {
 
     @Mock
     private GoogleSheetsServiceImpl googleSheetsServiceImpl;
 
     @InjectMocks
-    private SortServiceImpl demoService;
+    private SortServiceImpl sortService;
 
     @Test
     void processDataFromGoogleSheets() throws GeneralSecurityException, IOException {
@@ -34,10 +34,11 @@ class sortServiceImplTest {
         );
 
         // モックの動作を設定
-        when(googleSheetsServiceImpl.readDataFromPublicSheet()).thenReturn(mockMappedList);
+        // モックの動作を設定
+        when(googleSheetsServiceImpl.readDataFromPublicSheet("https://docs.google.com/spreadsheets/d/{シートID}", 2, 7)).thenReturn(mockMappedList);
 
         // テスト対象メソッドを呼び出し
-        List<String[]> result = demoService.processDataFromGoogleSheets();
+        List<String[]> result = sortService.processDataFromGoogleSheets("https://docs.google.com/spreadsheets/d/{シートID}", 2, 7);
 
         // 期待値と結果を比較
         assertEquals(5, result.size());
