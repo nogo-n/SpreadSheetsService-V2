@@ -28,3 +28,4 @@ jobs:
           chmod +x mvnw
           ./mvnw -B clean install
           ./mvnw test
+          
