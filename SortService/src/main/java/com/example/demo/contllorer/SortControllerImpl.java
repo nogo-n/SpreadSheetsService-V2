@@ -21,7 +21,7 @@ public class SortControllerImpl {
         this.SortServiceImpl = SortServiceImpl;
     }
 
-    @GetMapping("/index")
+    @GetMapping("")
     public String processGoogleSheetsData() throws GeneralSecurityException, IOException {
         return "index";
     }

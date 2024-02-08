@@ -4,6 +4,6 @@ spring:
   devtools:
     restart:
       enabled: true
-workshop.api.call:
-  host: localhost
+
+server:
   port: 8080
