@@ -1,4 +1,4 @@
-# SpreadSheetsService
+# SpreadSheetsService-V2
 ## 使用手順
 1. スプレッドシートを公開設定で作成
 2. 以下のようにA列に商品名などを記載し、B列にそのものの個数などを記載。
