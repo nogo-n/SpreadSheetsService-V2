@@ -25,14 +25,11 @@ class GoogleSheetsServiceImplTest {
 
         // テスト実行
         List<Map<String, String>> result = googleSheetsServiceImpl.readDataFromPublicSheet("https://docs.google.com/spreadsheets/d/{シートID}", 1, 5);
-
         // 結果の検証
+
         assert result.size() == 5;
         assert result.get(0).get("A").equals("16");
         assert result.get(1).get("B").equals("23");
-        // 他のデータも同様に検証
-
-        // 追加の検証やアサーションを行うことができます。
     }
 
 }

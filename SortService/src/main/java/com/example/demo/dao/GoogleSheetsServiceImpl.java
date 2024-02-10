@@ -15,7 +15,6 @@ public class GoogleSheetsServiceImpl implements GoogleSheetsService{
 
     private final RestTemplate restTemplate;
 
-    //RestTemplateをコンストラクタインジェクションをしている
     public GoogleSheetsServiceImpl(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
@@ -29,9 +28,13 @@ public class GoogleSheetsServiceImpl implements GoogleSheetsService{
         // CSV形式のデータを行ごとに分割
         String[] rows = sheetsData.split("\n");
 
-        // 特定の範囲のデータ行を取得（ここでは第2行から第7行）
-        //newRowsには[A,16, B,23, ...]のように値が入っている("A,16"が1つの要素である)
         String[] newRows = Arrays.copyOfRange(rows, startRow + 1, endRow + 2);
+
+        String lastValue = newRows[newRows.length - 1];
+        int lastIndex = lastValue.indexOf("\"");
+        if (lastIndex != -1) {
+            newRows[newRows.length - 1] = lastValue.substring(0, lastIndex);
+        }
         // newRows を出力
         System.out.println("newRows: " + Arrays.toString(newRows));
 

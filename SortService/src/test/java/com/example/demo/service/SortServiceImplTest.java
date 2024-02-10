@@ -34,16 +34,12 @@ class SortServiceImplTest {
         );
 
         // モックの動作を設定
-        // モックの動作を設定
         when(googleSheetsServiceImpl.readDataFromPublicSheet("https://docs.google.com/spreadsheets/d/{シートID}", 2, 7)).thenReturn(mockMappedList);
 
         // テスト対象メソッドを呼び出し
         List<String[]> result = sortService.processDataFromGoogleSheets("https://docs.google.com/spreadsheets/d/{シートID}", 2, 7);
 
-        // 期待値と結果を比較
         assertEquals(5, result.size());
-
-        // その他の検証が必要であれば追加
     }
 
 }

@@ -45,10 +45,9 @@ public class SortServiceImpl implements SortService{
         return resultList;
     }
 
-//    List<Map<String, String>>はkey=A,value=16のようになっているのでvalueでソートする処理
     private static void sortMappedListByValue(List<Map<String, String>> mappedList) {
         Collections.sort(mappedList, Comparator.comparing(m -> {
-            String value = m.values().iterator().next(); // 最初の要素の値を取得
+            String value = m.values().iterator().next();
             try {
                 return Integer.parseInt(value);
             } catch (NumberFormatException e) {
@@ -59,11 +58,10 @@ public class SortServiceImpl implements SortService{
     }
 
     //List<Map<String, String>>をList<String[]>に変換している
-    //例(List<<Map<A, 16>, <Map<B, 23>>...)をList<[A,B...], [16,23...]>のように変換
     private static List<String[]> convertMappedListToStringList(List<Map<String, String>> mappedList) {
         return mappedList.stream()
                 .map(map -> {
-                    // 各エントリにおいてキーと値を取得
+
                     Map.Entry<String, String> entry = map.entrySet().iterator().next();
                     String alphabet = entry.getKey();
                     String number = entry.getValue();

@@ -39,7 +39,6 @@ public class SortControllerImpl {
         // モデルにデータを追加
         model.addAttribute("googleSheetsData", googleSheetsData);
 
-        // 表示するHTMLのファイル名を返す
         return "index";
     }
 }
