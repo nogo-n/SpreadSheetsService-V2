@@ -14,7 +14,7 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SortServiceImplTest {
+class sortServiceImplTest {
 
     @Mock
     private GoogleSheetsServiceImpl googleSheetsServiceImpl;
@@ -41,5 +41,4 @@ class SortServiceImplTest {
 
         assertEquals(5, result.size());
     }
-
 }
