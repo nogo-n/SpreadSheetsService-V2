@@ -1,7 +1,16 @@
 # SpreadSheetsService
-スプレッドシートを読み込む際に入力した最後のセルの次のセルに/を入れてください
+## 使用手順
+1. スプレッドシートを公開設定で作成
+2. 以下のようにA列に商品名などを記載し、B列にそのものの個数などを記載。
 
-<img width="259" alt="image" src="https://github.com/nogo-n/SpreadSheetsService-V2/assets/158240732/a77c9fd4-0a24-4882-9f28-2b021d6f7d53">
+<img width="244" alt="image" src="https://github.com/nogo-n/SpreadSheetsService-V2/assets/158240732/df7b8ee4-19d6-41e3-9fa1-fad3efdb19b9">
+
+3. その後Webアプリケーションを開き以下のようにURLと読み取りたいセルの範囲を指定し、ソートボタンを押す
+   
+<img width="692" alt="image" src="https://github.com/nogo-n/SpreadSheetsService-V2/assets/158240732/1595c6c6-c620-4521-a96c-190d6f33decf">
+
+
+
 
 ## 技術スタック
 言語：Java <br>
