@@ -9,6 +9,10 @@
    
 <img width="692" alt="image" src="https://github.com/nogo-n/SpreadSheetsService-V2/assets/158240732/1595c6c6-c620-4521-a96c-190d6f33decf">
 
+4. ソートされた表が表示
+<img width="688" alt="image" src="https://github.com/nogo-n/SpreadSheetsService-V2/assets/158240732/bd428646-bb8b-4860-8401-780c9e304f15">
+
+
 
 
 
