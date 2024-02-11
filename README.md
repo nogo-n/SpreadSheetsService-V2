@@ -1,7 +1,7 @@
 # SpreadSheetsService-V2
 ## 使用手順
-1. スプレッドシートを公開設定で作成
-2. 以下のようにA列に商品名などを記載し、B列にそのものの個数などを記載。
+1. スプレッドシートを公開設定で作成([デモデータ](https://docs.google.com/spreadsheets/d/1nzUSepxaUks9VCNR62k0DufJOud-juDM81AEC_JOnvg/edit?usp=sharing))
+3. 以下のようにA列に商品名などを記載し、B列にそのものの個数などを記載。
 
 <img width="244" alt="image" src="https://github.com/nogo-n/SpreadSheetsService-V2/assets/158240732/df7b8ee4-19d6-41e3-9fa1-fad3efdb19b9">
 
