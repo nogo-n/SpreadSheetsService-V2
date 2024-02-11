@@ -54,7 +54,7 @@ public class SortServiceImpl implements SortService{
                 System.out.println("NumberFormatException: " + e.getMessage() + " for value: " + value);
                 return Integer.MAX_VALUE;
             }
-        }));
+        }, Comparator.reverseOrder()));
     }
 
     //List<Map<String, String>>をList<String[]>に変換している
