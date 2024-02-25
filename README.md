@@ -22,6 +22,7 @@ Googleスプレッドシートにあるデータをボタン1つでソートで�
 言語：Java <br>
 フレームワーク：Springboot <br>
 バージョン管理ツール：Git/Github <br>
+テストツール：JUnit <br>
 CI/CDツール：GitHub Actions <br>
 インフラ：GCP <br>
 仮想化技術：Docker <br>
