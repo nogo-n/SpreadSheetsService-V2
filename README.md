@@ -1,4 +1,6 @@
 # SpreadSheetsService-V2
+## サービス概要
+Googleスプレッドシートにあるデータをボタン1つでソートできるアプリケーション
 ## 使用手順
 1. スプレッドシートを公開設定で作成([デモデータ](https://docs.google.com/spreadsheets/d/1nzUSepxaUks9VCNR62k0DufJOud-juDM81AEC_JOnvg/edit?usp=sharing))
 3. 以下のようにA列に商品名などを記載し、B列にそのものの個数などを記載。
